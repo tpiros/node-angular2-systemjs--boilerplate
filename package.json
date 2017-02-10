@@ -1,0 +1,41 @@
+{
+  "name": "mlu2017",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "@angular/common": "~2.4.0",
+    "@angular/compiler": "~2.4.0",
+    "@angular/core": "~2.4.0",
+    "@angular/http": "~2.4.0",
+    "@angular/platform-browser": "~2.4.0",
+    "@angular/platform-browser-dynamic": "~2.4.0",
+    "@angular/router": "~3.4.0",
+    "angular-in-memory-web-api": "~0.2.4",
+    "core-js": "^2.4.1",
+    "express": "^4.14.1",
+    "marklogic": "^1.0.6",
+    "request": "^2.79.0",
+    "rxjs": "5.0.1",
+    "systemjs": "0.19.40",
+    "zone.js": "^0.7.4"
+  },
+  "devDependencies": {
+    "@types/node": "^6.0.46",
+    "concurrently": "^3.1.0",
+    "typescript": "~2.0.10"
+  },
+  "scripts": {
+    "start": "concurrently \"npm run build\" \"node app.js\"",
+    "startDev": "concurrently \"npm run runDev\" \"npm run buildWatch\"",
+    "setup": "node setup/setup.js",
+    "runDev": "nodemon app.js",
+    "build": "tsc",
+    "buildWatch": "tsc -w"
+  },
+  "keywords": [
+    "marklogic"
+  ],
+  "author": "Tamas Piros",
+  "license": "MIT"
+}
